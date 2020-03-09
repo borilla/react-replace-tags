@@ -1,25 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Animal from './Animal';
-import Template from './Template';
+import ReplaceTags from './ReplaceTags';
 
 function App() {
-	const placeholders = {
+	const tags = {
 		color: 'brown',
 		action: 'jumps',
 		animal: 'dog',
 	};
 
 	return (
-		<Template placeholders={placeholders}>
-			<p>
-				The little <span class="color">%color%</span> fox
+		<ReplaceTags tags={tags}>
+			<div>
+				The %little% <span className="color">%color%</span> fox
 				<ul>
 					<li>%action% over</li>
-					<li>the lazy <Animal>%animal%</Animal></li>
+					<li>the lazy <Animal className="animal">%animal%</Animal></li>
 				</ul>
-			</p>
-		</Template>
+			</div>
+		</ReplaceTags>
 	);
 }
 

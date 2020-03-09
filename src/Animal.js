@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Animal({ children }) {
-	return <span class="animal">{children}</span>;
+export default function Animal({ children, className }) {
+	return <span className={className}>{children}</span>;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function Template({ children, placeholders }) {
+export default function ReplaceTags({ children, tags }) {
 	function replaceChildren(children) {
 		return React.Children.map(children, replaceChild);
 	}
 
 	function replaceChild(child) {
 		if (isString(child)) {
-			return replacePlaceholdersInString(child, placeholders);
+			return replaceTagsInString(child, tags);
 		}
 
 		if (isReactElement(child)) {
@@ -32,15 +32,15 @@ function isReactElement(child) {
 	return child.hasOwnProperty('type');
 }
 
-function replacePlaceholdersInString(str, placeholders) {
+function replaceTagsInString(str, tags) {
 	// tags are surrounded by '%' and can contain dash or underscore characters, eg '%first-name%'
 	const regex = /%([a-z][a-z0-9-_]*)%/g;
 
 	return str.replace(regex, (match, tag) => {
-		if (!placeholders.hasOwnProperty(tag)) {
+		if (!tags.hasOwnProperty(tag)) {
 			return match;
 		}
 		
-		return placeholders[tag];
+		return tags[tag];
 	});
 }
