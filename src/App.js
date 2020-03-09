@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import Template from './Template';
 
 function App() {
-	const replacements = {
+	const placeholders = {
 		color: 'brown',
 		action: 'jumps',
 		animal: 'dog',
 	};
 
 	return (
-		<Template>
+		<Template placeholders={placeholders}>
 			The little %color% fox %action% over the lazy %animal%
 		</Template>
 	);
