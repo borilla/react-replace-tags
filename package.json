@@ -1,7 +1,7 @@
 {
-  "name": "react-replace",
+  "name": "react-replace-tags",
   "version": "0.0.1",
-  "description": "Replace template strings in React component children",
+  "description": "Replace tag placeholders in React component children",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
