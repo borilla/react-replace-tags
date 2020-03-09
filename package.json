@@ -1,0 +1,24 @@
+{
+  "name": "react-replace",
+  "version": "0.0.1",
+  "description": "Replace template strings in React component children",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "borilla",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-asset-copier": "^1.0.0",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "sass": "^1.22.12"
+  },
+  "assetsPath": "static"
+}
