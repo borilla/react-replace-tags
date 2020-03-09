@@ -33,6 +33,7 @@ function isReactElement(child) {
 }
 
 function replacePlaceholdersInString(str, placeholders) {
+	// tags are surrounded by '%' and can contain dash or underscore characters, eg '%first-name%'
 	const regex = /%([a-z][a-z0-9-_]*)%/g;
 
 	return str.replace(regex, (match, tag) => {

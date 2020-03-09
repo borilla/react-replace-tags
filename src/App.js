@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Animal from './Animal';
 import Template from './Template';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
 				The little <span class="color">%color%</span> fox
 				<ul>
 					<li>%action% over</li>
-					<li>the lazy <span class="animal">%animal%</span></li>
+					<li>the lazy <Animal>%animal%</Animal></li>
 				</ul>
 			</p>
 		</Template>
