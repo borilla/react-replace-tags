@@ -11,7 +11,13 @@ function App() {
 
 	return (
 		<Template placeholders={placeholders}>
-			The little %color% fox %action% over the lazy %animal%
+			<p>
+				The little <span class="color">%color%</span> fox
+				<ul>
+					<li>%action% over</li>
+					<li>the lazy <span class="animal">%animal%</span></li>
+				</ul>
+			</p>
 		</Template>
 	);
 }
